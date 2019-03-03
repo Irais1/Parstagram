@@ -89,6 +89,60 @@
                     <view key="view" contentMode="scaleToFill" id="BA3-Lf-9Jt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dkq-jQ-HxQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="389" id="CB3-45-5lD" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="389"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CB3-45-5lD" id="1CK-pu-NAU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="388.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewj-oF-alB">
+                                                    <rect key="frame" x="105.5" y="357" width="261.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ht6-Cc-7bA">
+                                                    <rect key="frame" x="8" y="8" width="359" height="341"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Ht6-Cc-7bA" secondAttribute="height" multiplier="359:341" id="mgw-WU-nFK"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4B-PB-KA2">
+                                                    <rect key="frame" x="8" y="357" width="89.5" height="20"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ewj-oF-alB" secondAttribute="trailing" constant="8" id="0Dq-iP-CU3"/>
+                                                <constraint firstItem="ewj-oF-alB" firstAttribute="leading" secondItem="h4B-PB-KA2" secondAttribute="trailing" constant="8" id="0je-Wv-b8L"/>
+                                                <constraint firstItem="h4B-PB-KA2" firstAttribute="top" secondItem="Ht6-Cc-7bA" secondAttribute="bottom" constant="8" id="3T2-Mu-JqZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ht6-Cc-7bA" secondAttribute="trailing" constant="8" id="Bf6-Rf-D3q"/>
+                                                <constraint firstItem="Ht6-Cc-7bA" firstAttribute="top" secondItem="1CK-pu-NAU" secondAttribute="top" constant="8" id="Qxi-yG-jL2"/>
+                                                <constraint firstItem="ewj-oF-alB" firstAttribute="top" secondItem="Ht6-Cc-7bA" secondAttribute="bottom" constant="8" id="Rwz-DT-7kt"/>
+                                                <constraint firstItem="ewj-oF-alB" firstAttribute="top" secondItem="Ht6-Cc-7bA" secondAttribute="bottom" constant="8" id="bts-YQ-Pqn"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ewj-oF-alB" secondAttribute="bottom" constant="8" id="g3p-4u-iZa"/>
+                                                <constraint firstItem="Ht6-Cc-7bA" firstAttribute="leading" secondItem="1CK-pu-NAU" secondAttribute="leading" constant="8" id="nnC-UZ-sqH"/>
+                                                <constraint firstItem="h4B-PB-KA2" firstAttribute="leading" secondItem="1CK-pu-NAU" secondAttribute="leading" constant="8" id="wKS-uh-tcx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="ewj-oF-alB" id="4pQ-6x-29h"/>
+                                            <outlet property="photoView" destination="Ht6-Cc-7bA" id="LrR-iU-LqN"/>
+                                            <outlet property="usernameLabel" destination="h4B-PB-KA2" id="lyC-i5-g8T"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Yqz-Vd-hEJ"/>
                     </view>
@@ -99,10 +153,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Dkq-jQ-HxQ" id="noL-Vw-rsB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vJ-lw-WUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1633" y="97"/>
+            <point key="canvasLocation" x="1632.8" y="96.7016491754123"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="cPM-rY-VWD">
