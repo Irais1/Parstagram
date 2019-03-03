@@ -39,6 +39,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    @IBAction func onLogOut(_ sender: Any) {
+        PFUser.logOut()
+        //self.performSegue(withIdentifier: "loginSegue", sender: nil)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
