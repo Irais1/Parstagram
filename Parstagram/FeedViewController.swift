@@ -2,7 +2,7 @@
 //  FeedViewController.swift
 //  Parstagram
 //
-//  Created by Irais Gopar osorio on 2/25/19.
+//  Created by Irais Gopar osorio on 3/2/19.
 //  Copyright © 2019 Irais Gopar Osorio. All rights reserved.
 //
 
