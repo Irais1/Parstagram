@@ -15,10 +15,18 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [PFObject]()
+    let query = PFQuery(className: "Posts")
+    
+    let myRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        myRefreshControl.addTarget(self, action: #selector(loadMorePosts), for: .valueChanged)
+        tableView.refreshControl =  myRefreshControl
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 150
+        
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
@@ -27,7 +35,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let query = PFQuery(className: "Posts")
         query.includeKey("author")
         query.limit = 20
         
@@ -40,11 +47,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func onLogOut(_ sender: Any) {
-        PFUser.logOut()
-        //self.performSegue(withIdentifier: "loginSegue", sender: nil)
+       // PFUser.logOut()
+        PFUser.logOutInBackground()
         self.dismiss(animated: true, completion: nil)
     }
     
+    @objc func loadMorePosts(){
+        query.limit = query.limit + 20
+        self.tableView.reloadData()
+        
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count

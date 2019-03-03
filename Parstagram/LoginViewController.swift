@@ -19,6 +19,9 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func onTap(_ sender: Any) {
+        view.endEditing(true)
+    }
     
     @IBAction func onSignIn(_ sender: Any) {
         
