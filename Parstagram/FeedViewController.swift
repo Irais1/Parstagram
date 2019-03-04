@@ -47,10 +47,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-//    @IBAction func onLogout(_ sender: Any) {
-//        PFUser.logOutInBackground()
-//        
-//    }
+    @IBAction func onLogout(_ sender: Any) {
+        //PFUser.logOutInBackground()
+        
+    }
     
 //    @objc func loadMorePosts(){
 //        query.limit = query.limit + 20
