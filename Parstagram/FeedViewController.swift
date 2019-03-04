@@ -17,13 +17,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var posts = [PFObject]()
     let query = PFQuery(className: "Posts")
     
-    let myRefreshControl = UIRefreshControl()
+    //let myRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        myRefreshControl.addTarget(self, action: #selector(loadMorePosts), for: .valueChanged)
-        tableView.refreshControl =  myRefreshControl
+//        myRefreshControl.addTarget(self, action: #selector(loadMorePosts), for: .valueChanged)
+//        tableView.refreshControl =  myRefreshControl
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 150
@@ -47,18 +47,17 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    @IBAction func onLogOut(_ sender: Any) {
-       // PFUser.logOut()
-        PFUser.logOutInBackground()
-        self.dismiss(animated: true, completion: nil)
-    }
+//    @IBAction func onLogout(_ sender: Any) {
+//        PFUser.logOutInBackground()
+//        
+//    }
     
-    @objc func loadMorePosts(){
-        query.limit = query.limit + 20
-        self.tableView.reloadData()
-        self.myRefreshControl.endRefreshing()
-        
-    }
+//    @objc func loadMorePosts(){
+//        query.limit = query.limit + 20
+//        self.tableView.reloadData()
+//        self.myRefreshControl.endRefreshing()
+//
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
@@ -70,7 +69,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let post = posts[indexPath.row]
         
         let user = post["author"] as! PFUser
-        cell.usernameLabel.text = user.username
+        cell.usernameLabel.text = user.username!
         
         cell.captionLabel.text = post["caption"] as! String
         
