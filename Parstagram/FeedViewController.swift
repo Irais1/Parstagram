@@ -24,6 +24,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         myRefreshControl.addTarget(self, action: #selector(loadMorePosts), for: .valueChanged)
         tableView.refreshControl =  myRefreshControl
+        
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 150
         
@@ -55,6 +56,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @objc func loadMorePosts(){
         query.limit = query.limit + 20
         self.tableView.reloadData()
+        self.myRefreshControl.endRefreshing()
         
     }
     
