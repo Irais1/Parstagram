@@ -21,9 +21,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intagramL" translatesAutoresizingMaskIntoConstraints="NO" id="LeW-Rf-hUz">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Parstagram" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sDr-Uh-Vhl">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sDr-Uh-Vhl">
                                 <rect key="frame" x="96" y="296" width="263" height="94"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="49"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Parstagram">
+                                        <attributes>
+                                            <color key="NSColor" red="0.40362679462726536" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="67" name="SignPainter-HouseScriptSemibold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instaCam" translatesAutoresizingMaskIntoConstraints="NO" id="BIA-ae-jgt">

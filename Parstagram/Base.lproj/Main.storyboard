@@ -104,7 +104,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="389" id="CB3-45-5lD" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="389" id="CB3-45-5lD" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="389"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CB3-45-5lD" id="1CK-pu-NAU">
@@ -183,6 +183,28 @@
                                             <outlet property="commentLabel" destination="A2X-4u-GzH" id="Qpu-WG-x0G"/>
                                             <outlet property="nameLabel" destination="xwK-er-3s6" id="Kgr-fA-Dvv"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddCommentCell" id="wVz-0h-L0c">
+                                        <rect key="frame" x="0.0" y="461" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wVz-0h-L0c" id="fV0-G0-y69">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Comment ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqD-kl-C5r">
+                                                    <rect key="frame" x="16" y="8" width="351" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="PqD-kl-C5r" secondAttribute="bottom" constant="8" id="467-Rb-jel"/>
+                                                <constraint firstItem="PqD-kl-C5r" firstAttribute="leading" secondItem="fV0-G0-y69" secondAttribute="leading" constant="16" id="51j-TV-VPP"/>
+                                                <constraint firstItem="PqD-kl-C5r" firstAttribute="top" secondItem="fV0-G0-y69" secondAttribute="top" constant="8" id="ewe-ei-KEA"/>
+                                                <constraint firstAttribute="trailing" secondItem="PqD-kl-C5r" secondAttribute="trailing" constant="8" id="hr4-Oe-O4C"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
